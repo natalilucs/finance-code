@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de moedas Finance Coder</title>
+    <link rel="stylesheet" href="./css/conversor.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    /> 
+  </head>
+
+  <body id="container" onload="onLoad()">
+    <header>
+      <div class="wrapper">
+        <div>
+          <a href="landing_finance_coder.html">
+            <img src="./img/logo.png" alt="" />
+          </a>
+        </div>
+
+        <div id="menuPrincipal">
+          <nav>
+            <ul>
+              <a href="landing_finance_coder.html"><li>Home</li></a>
+              <a href="calculadora.html"><li>Calculadora</li></a>
+              <a href="cadastro.html"><li>Cadastro</li></a>
+              <a href="conversor.html"><li>Conversor de Moedas</li></a>  
+            </ul>
+          </nav>
+          <div class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        </div>
+      </div>
+    </header>
+    <main id = "conversor-main">
+        <section id = "secao-principal">
+            <div>
+                <h1 class="titulo">Conversor de moedas</h1>
+            </div> 
+            <br>          
+            <div id="conteudo-conversao">
+              <div>
+                <p>Informe o valor:</p>
+                <input type="text" id="valorum" placeholder="0.00" onblur="validarValor(this)">
+              </div>
+              <div>
+                <p>Moeda Origem:</p>
+                <select id="converter">                
+                    <option value="USD">Dolar americano</option>
+                    <option value="CAD">Dolar Canadense</option>
+                    <option value="BRL" selected>Real</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GPB">Libra</option>
+                    <option value="ARS">Peso Argentino</option>
+                </select>
+              </div>
+              <div>
+                <p>Moeda Destino:</p>
+                <select id="convertido" onLoad()>
+                    <option value="USD" selected>Dolar americano</option>
+                    <option value="CAD">Dolar Canadense</option>
+                    <option value="BRL">Real</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GPB">Libra</option>
+                    <option value="ARS">Peso Argentino</option>              
+                </select> 
+              </div>
+            </div>
+            <br>
+            <button class="btn" onclick="conversaoMoeda()">Calcular</button>  
+            <div id="resultado-conversor">
+                <span id="resposta">0.00</span>
+            </div>
+            <h6>**Valor cotação referente ao dia 13/08/2021.</h6>
+        </section>
+    </main>
+    <aside>
+      <section id="botoesNoturnoClaro">
+        <button id="modoNoturno" onclick="modoNoturno()"><i id="darkLua" class="fas fa-moon"></i></button>
+        <!-- <img  src="dark-mode-6682.svg" alt="Modo noturno lua" /> -->
+        <button id="modoClaro" onclick="modoClaro()"><i id="clearSol" class="far fa-sun"></i></button>
+        <!-- <img  src="sun-8725.svg" alt="Modo claro sol" /> -->
+        
+      </section>
+      <section id="botoesLetras">
+        <button id="aumentaLetra">A +</button>
+        <button id="diminuiLetra">A -</button>
+        <!-- colocar um link para noticias de conversao de moedas, bolsa de valores-->
+      </section>
+    </aside>
+    <footer>
+      <span>Copyright &copy; 2021</span>
+      <!-- <span>Alessandra | André | Jade | Natali | Rebeca</span> -->
+    </footer>
+    <script src="./js/conversor.js"></script>
+  </body>
+</html>

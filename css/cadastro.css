@@ -1,0 +1,57 @@
+@import url('../css/landing_finance_coder.css');
+
+/*PAGINA DE CADASTRO: CSS inicia aqui!>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+#cadastroMain{
+    /* background-color: red; */
+    flex-direction: column;
+    align-items: center;
+}
+
+#trocarTexto {
+    display: none; /* esconde temporariamente o meu <p>*/
+  }
+  
+  #formularioCadastro {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #748185af;
+    border: rgb(170, 152, 248) 1px;
+    border-style: outset;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+    padding: 15px;
+    margin: 0 0 50px;
+    font-size: 1.6rem;
+  }
+  
+  #cadastroMain {
+    background-image: url('../img/tela.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  @media(max-width:950px){
+    main{
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #formularioCadastro {
+      width: 60%;
+      min-width: 300px;
+    }
+  }
+  
+  /*PAGINA DE CADASTRO: CSS termina aqui!>>>>>>>>>>>>>>>>>>>>>>>>*/
+  footer {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -3px -3px 15px rgb(88, 88, 88);
+}

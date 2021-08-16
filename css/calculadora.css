@@ -1,0 +1,230 @@
+@import url('../css/landing_finance_coder.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* main {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#calculadoraMain {
+    background-image: url('../img/matematica.jpeg');
+    padding: 50px 0;
+}
+
+.section-calculadora {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;   
+}
+
+#botaoCalcComum {
+    width: auto;
+    height: auto;
+    padding: 2vh 3vw;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px 10px black;
+    background-image: linear-gradient(rgb(49, 49, 49), black, rgb(49, 49, 49));
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 75%;
+}
+
+#botaoCalcCient {
+    width: auto;
+    height: auto;
+    padding: 2vh 3vw;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px 10px black;
+    background-image: linear-gradient(rgb(49, 49, 49), black, rgb(49, 49, 49));
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 90%;
+}
+
+#calculadoraComum {
+    width: 65%;
+    height: 70%;
+    background-color: #444444f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 3px -3px 15px black;
+}
+
+#calculadoraCientifica {
+    width: 65%;
+    height: 70%;
+    background-color: #444444f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 3px -3px 15px black;
+}
+
+.disable {
+    pointer-events: none;
+    background-color: rgba(53, 53, 53, 0.95);
+}
+
+#displayCo {
+    width: 80%;
+    height: 10%;
+    background-color: rgb(204, 204, 204);
+    box-shadow: 3px 3px 15px rgb(88, 88, 88);
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    font-size: 30px;
+}
+
+#displayCi {
+    width: 80%;
+    height: 10%;
+    background-color: rgb(204, 204, 204);
+    box-shadow: 3px 3px 15px rgb(88, 88, 88);
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    font-size: 30px;
+}
+
+.botoes-calc {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.numeros {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.numeros button {
+    width: 4vw;
+    height: 6vh;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: bold;
+    background-color: rgb(204, 204, 204);
+    margin: 6px;
+    box-shadow: 3px 3px 15px rgb(88, 88, 88);
+    font-size: 26px;
+}
+
+.numeros button:hover {
+    background-color: rgb(146, 146, 146);
+}
+
+.sinais {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sinais button {
+    width: 4vw;
+    height: 6vh;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: bold;
+    background-color: rgb(204, 204, 204);
+    margin: 6px 0px 6px 0px;
+    box-shadow: 3px 3px 15px rgb(88, 88, 88);
+    font-size: 26px;
+}
+
+.sinais button:hover {
+    background-color: rgb(146, 146, 146);
+}
+
+#cientifica {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+#cientifica button {
+    width: 4vw;
+    height: 6vh;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: bold;
+    background-color: rgb(204, 204, 204);
+    margin: 6px 0px 6px 0px;
+    box-shadow: 3px 3px 15px rgb(88, 88, 88);
+    font-size: 22px;
+}
+
+#cientifica button:hover {
+    background-color: rgb(146, 146, 146);
+}
+
+/* aside {
+    width: 4vw;
+    height: 80vh;
+    position: fixed;
+    bottom: 10vh;
+    right: 1vw;
+}
+
+#botoesLetras {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#botoesLetras button {
+    width: 80%;
+    height: 5vh;    
+    background-color: #138ACE;
+    border-radius: 10px;
+    border-style: none;
+    margin-top: 5vh;
+    color: white;
+    font-weight: bold;
+} */
+
+
+footer {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -3px -3px 15px rgb(88, 88, 88);
+}

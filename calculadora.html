@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Coder</title>
+    <!-- <link rel="stylesheet" href="../reset.css"> -->
+    <link rel="stylesheet" href="./css/landing_finance_coder.css">
+    <link rel="stylesheet" href="./css/calculadora.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>   
+    <script src="./js/calculadora.js"></script>
+  </head>
+
+  <body id="container" onload="onLoad()">
+    <header>
+      <div class="wrapper">
+        <div>
+          <a href="landing_finance_coder.html">
+            <img src="./img/logo.png" alt="" />
+          </a>
+        </div>
+
+        <div id="menuPrincipal">
+          <nav>
+            <ul>
+              <a href="landing_finance_coder.html"><li>Home</li></a>
+              <a href="calculadora.html"><li>Calculadora</li></a>
+              <a href="cadastro.html"><li>Cadastro</li></a>
+              <a href="conversor.html"><li>Conversor de Moedas</li></a>  
+            </ul>
+          </nav>
+          <div class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="calculadoraMain">
+        <!-- section com calculadora comum -->
+        <section class="section-calculadora">
+            <!-- botão para selecionar Calculadora Comum -->
+            <button id="botaoCalcComum" onclick="habilitaCalcComum()">Calculadora Comum</button>
+
+            <!-- section que contem toda a estrutura da calculadora comum -->
+            <section id="calculadoraComum" class="disable">
+
+                <!-- div com display onde aparecem os números, operações, resultados -->
+                <div id="displayCo">0</div>
+
+                <!-- section abaixo do display, contendo todos os botões da calculadora -->
+                <section class="botoes-calc">
+
+                    <!-- section com botões dos números -->
+                    <section class="numeros">
+                        <!-- section com botão de limpar o display e zerar cálculo (botão C)-->
+                        
+
+                        <!-- botões 7, 8 e 9, onclick chamam a função defineOperandoComum(), que o valor(value) do botão clicado, guarda em uma variável e imprime o valor no display -->
+                        <section class="botoes7a9">
+                            <button value="7" onclick="defineOperandoComum(this.value)">7</button>
+                            <button value="8" onclick="defineOperandoComum(this.value)">8</button>
+                            <button value="9" onclick="defineOperandoComum(this.value)">9</button>
+                        </section>
+            
+                            <!-- botões 4, 5 e 6, onclick chamam a função defineOperandoComum(), que o valor(value) do botão clicado, guarda em uma variável e imprime o valor no display -->
+                        <section class="botoes4a6">
+                            <button value="4" onclick="defineOperandoComum(this.value)">4</button>
+                            <button value="5" onclick="defineOperandoComum(this.value)">5</button>
+                            <button value="6" onclick="defineOperandoComum(this.value)">6</button>
+                        </section>
+                        
+                        <!-- botões 1, 2 e 3, onclick chamam a função defineOperandoComum(), que pega o valor (this.value) do botão clicado, guarda em uma variável e imprime o valor no display -->
+                        <section class="botoes1a3">
+                            <button value="1" onclick="defineOperandoComum(this.value)">1</button>
+                            <button value="2" onclick="defineOperandoComum(this.value)">2</button>
+                            <button value="3" onclick="defineOperandoComum(this.value)">3</button>
+                        </section>
+            
+                        <section>
+                            <button value="0" onclick="defineOperandoComum(this.value)">0</button>
+                            <button value="." onclick="defineOperandoComum(this.value)">.</button>
+                            
+                            <!-- botão de =, chama função operacaoComum(), que realiza o cálculo de acordo com os dados inputados pelos números e sinal da operação -->
+                            <button value="=" onclick="operacaoComum()">=</button>
+                        </section>
+
+                    </section>
+
+                    <!-- section com botões de sinais de operadores matemáticos -->
+                    <section class="sinais">  
+                        <!-- botão C chama função limpaDisplayComum() onclick -->
+                        <button id="limpa" value="limpa" onclick="limpaDisplayComum()">C</button>
+                        <button value="/" id="teclaDivisaoCo" onclick="defineOperadorComum(this.value)">&divide;</button>
+                        <button value="x" id="teclaMultiplicacaoCo" onclick="defineOperadorComum(this.value)">x</button>
+                        <button value="-" id="teclaSubtracaoCo" onclick="defineOperadorComum(this.value)">-</button>
+                        <button value="+" id="teclaAdicaoCo" onclick="defineOperadorComum(this.value)">+</button>                    
+                    </section>
+                </section>
+                           
+            </section>
+        </section>
+        
+
+        <!-- section com calculadora científica -->
+        <section class="section-calculadora">
+            <button id="botaoCalcCient" onclick="habilitaCalcCient()">Calculadora Científica</button>
+
+            <section id="calculadoraCientifica" class="disable">
+                <div id="displayCi">0</div>
+
+                <section class="botoes-calc">
+
+                    <section class="numeros">
+
+                        <section class="botoes7a9">
+                            <button value="7" onclick="defineOperandoCient(this.value)">7</button>
+                            <button value="8" onclick="defineOperandoCient(this.value)">8</button>
+                            <button value="9" onclick="defineOperandoCient(this.value)">9</button>
+                        </section>
+            
+                        <section class="botoes4a6">
+                            <button value="4" onclick="defineOperandoCient(this.value)">4</button>
+                            <button value="5" onclick="defineOperandoCient(this.value)">5</button>
+                            <button value="6" onclick="defineOperandoCient(this.value)">6</button>
+                        </section>
+            
+                        <section class="botoes1a3">
+                            <button value="1" onclick="defineOperandoCient(this.value)">1</button>
+                            <button value="2" onclick="defineOperandoCient(this.value)">2</button>
+                            <button value="3" onclick="defineOperandoCient(this.value)">3</button>
+                        </section>
+            
+                        <section>
+                            <button value="0" onclick="defineOperandoCient(this.value)">0</button>
+                            <button value="." onclick="defineOperandoCient(this.value)">.</button>
+                            <button id="teclaIgualCo" value="=" onclick="operacaoCient()">=</button>
+                        </section>
+
+                    </section>
+        
+                    <section class="sinais">
+                        <button value="/" onclick="defineOperadorCient(this.value)">&divide;</button>
+                        <button value="x" onclick="defineOperadorCient(this.value)">x</button>
+                        <button value="-" onclick="defineOperadorCient(this.value)">-</button>
+                        <button value="+" onclick="defineOperadorCient(this.value)">+</button>                    
+                    </section>
+
+                    <section id="cientifica">
+                        <button id="limpa" value="limpa" onclick="limpaDisplayCientifica()">C</button>
+                        <button value="sqrt" onclick="defineOperadorCient(this.value)">&radic;</button>
+                        <button value="²" onclick="defineOperadorCient(this.value)">x²</button>
+                        <button value="³" onclick="defineOperadorCient(this.value)">x³</button>
+                        <button value="PI" onclick="defineOperadorCient(this.value)">&#928;</button>                    
+                    </section> 
+                                                                   
+            </section>
+        </section>
+        
+    </main>
+
+    
+    <aside>
+      <section id="botoesNoturnoClaro">
+        <button id="modoNoturno" onclick="modoNoturno()"><i id="darkLua" class="fas fa-moon"></i></button>
+        <!-- <img  src="dark-mode-6682.svg" alt="Modo noturno lua" /> -->
+        <button id="modoClaro" onclick="modoClaro()"><i id="clearSol" class="far fa-sun"></i></button>
+        <!-- <img  src="sun-8725.svg" alt="Modo claro sol" /> -->
+        
+      </section>
+      <section id="botoesLetras">
+        <button id="aumentaLetra">A +</button>
+        <button id="diminuiLetra">A -</button>
+        <!-- colocar um link para noticias de conversao de moedas, bolsa de valores-->
+      </section>
+    </aside>
+    <footer>
+      <span>Copyright &copy; 2021</span>
+      <!-- <span>Alessandra | André | Jade | Natali | Rebeca</span> -->
+    </footer>
+    <script src="./js/landing_finance_coder.js"></script>
+  </body>
+</html>
